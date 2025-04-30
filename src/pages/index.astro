@@ -1,6 +1,5 @@
 ---
 import Badge from '../components/Badge.astro';
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -9,8 +8,17 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1 class="text-white">¡Hola! Soy Erick <Badge>Disponible para trabajar</Badge></h1>
-    <h2>Ingeniero de Sistemas y Desarrollador Backend de Ibagué, Colombia 🇨🇴.</h2>
-    <ul></ul>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        ¡Hola! Soy Erick <a
+          href="https://www.linkedin.com/in/erick-santiago-rodriguez-reinoso/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class="text-xl opacity-80">Ingeniero de Sistemas y Desarrollador Backend de Ibagué, Colombia 🇨🇴.</h2>
+      <ul></ul>
+    </section>
   </main>
 </Layout>

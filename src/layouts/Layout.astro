@@ -17,24 +17,23 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
+
   <body>
     <Header />
     <slot />
   </body>
-
-  <style is:global>
-    :root {
-      color-scheme: light dark;
-    }
-    html {
-      font-family: 'Onest Variable', system-ui, sans-serif;
-    }
-    body {
-      background: #2725257c;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 100vh;
-    }
-  </style>
 </html>
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    font-family: 'Onest Variable', system-ui, sans-serif;
+  }
+  body {
+    background: #2725257c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+</style>
