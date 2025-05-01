@@ -9,6 +9,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Welcome to Astro.">
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-44">
+      <img class="rounded-full w-12 h-12 mb-4" src="/images/kcire1.png" alt="kcire photo" />
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
         ¡Hola! Soy Erick <a
           href="https://www.linkedin.com/in/erick-santiago-rodriguez-reinoso/"
@@ -17,7 +18,10 @@ import Layout from '../layouts/Layout.astro';
           class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a
         >
       </h1>
-      <h2 class="text-xl opacity-80">Ingeniero de Sistemas y Desarrollador Backend de Ibagué, Colombia 🇨🇴.</h2>
+      <h2 class="text-2xl opacity-80 text-wrap">
+        <span class="text-red-200/90">Ingeniero de Sistemas y Desarrollador Backend</span>
+        <span class="text-yellow-100/90">de Ibagué, Colombia 🇨🇴.</span>
+      </h2>
       <ul></ul>
     </section>
   </main>
