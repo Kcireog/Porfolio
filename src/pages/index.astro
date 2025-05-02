@@ -2,6 +2,7 @@
 import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
 import SocialPill from '../components/SocialPill.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -25,14 +26,14 @@ import SocialPill from '../components/SocialPill.astro';
         <span class="text-yellow-100/90">de Ibagué, Colombia 🇨🇴.</span>
       </h2>
       <ul>
-        <nav class="flex gap-x-2">
-          <SocialPill>
-            <LinkedInIcon class="w-6 h-6" GitHub < a />
-            GitHub
-          </SocialPill>
-          <SocialPill>
+        <nav class="flex gap-x-2 mt-4">
+          <SocialPill href="https://www.linkedin.com/in/erick-santiago-rodriguez-reinoso/">
             <LinkedInIcon class="w-6 h-6" LinkedIn < a />
             LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/Kcireog">
+            <GitHubIcon class="w-6 h-6" GitHub < a />
+            GitHub
           </SocialPill>
         </nav>
       </ul>
