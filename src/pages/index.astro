@@ -4,8 +4,10 @@ import Layout from '../layouts/Layout.astro';
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import GitHubIcon from '../components/icons/GitHub.astro';
 import MailIcon from '../components/icons/Mail.astro';
+import BriefCaseIcon from '../components/icons/BriefCase.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -15,7 +17,7 @@ import Experience from '../components/Experience.astro';
   title="Porfolio de Erick - Desarrollador Backend "
   description="Contrata a Erick Reinoso, Desarrollador Backend especializado en Java y Spring Boot. Ingeniero de Sistemas enfocado en construir arquitecturas sólidas, seguras y eficientes para aplicaciones web modernas."
   <main>
-  <section class="w-full lg:w-[740px] mx-auto py-44">
+  <SectionContainer class="py-44 pb-25">
     <img class="rounded-full w-12 h-12 mb-4" src="/images/kcire1.png" alt="kcire photo" />
     <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
       ¡Hola! Soy Erick <a
@@ -44,9 +46,13 @@ import Experience from '../components/Experience.astro';
         prueba@gmail.com
       </SocialPill>
     </nav>
-  </section>
+  </SectionContainer>
 
-  <section>
+  <SectionContainer>
+    <h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
+      <BriefCaseIcon class="w-7 h-7" />
+      Experiencia Laboral
+    </h2>
     <Experience />
-  </section>
+  </SectionContainer>
 </Layout>
