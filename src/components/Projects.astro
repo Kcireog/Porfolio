@@ -1,11 +1,11 @@
 ---
 const PROJECTS = [
   {
-    title: 'Api',
-    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'LiterAlura',
+    description: 'Gestion de libros y sus autores.',
     link: '#',
-    github: '#',
-    image: '',
+    github: 'https://github.com/Kcireog/LiterAlura',
+    image: '/projects/literaluraProject.webp',
     tags: ['Java', 'Spring Boot'],
   },
 ];
@@ -14,14 +14,14 @@ const PROJECTS = [
 {
   PROJECTS.map(({ image, title, description, tags }) => (
     <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul>
         {tags.map((tag) => (
           <li>{tag}</li>
         ))}
       </ul>
-      <img src="" alt={`Captura de pantalla del proyecto ${image}`} />
+      <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
     </article>
   ))
 }
