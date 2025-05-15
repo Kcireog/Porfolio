@@ -2,15 +2,15 @@
 import Java from '../components/icons/Java.astro';
 import SpringBoot from '../components/icons/SpringBoot.astro';
 const TAGS = {
-  SPRING: {
-    name: 'Spring Boot',
-    class: 'bg-black text-white',
-    icon: SpringBoot,
-  },
   JAVA: {
     name: 'Java',
-    class: 'bg-black text-white',
+    class: 'bg-[#ad9c8f] text-white',
     icon: Java,
+  },
+  SPRING: {
+    name: 'Spring Boot',
+    class: 'bg-[#879681] text-white',
+    icon: SpringBoot,
   },
 };
 const PROJECTS = [
@@ -30,10 +30,10 @@ const PROJECTS = [
     <article>
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-4 flex-row">
+      <ul class="flex gap-x-4 flex-row mb-2">
         {tags.map((tag) => (
           <li>
-            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class}`}>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
               <tag.icon class="h-4 w-4" />
               {tag.name}
             </span>
