@@ -1,6 +1,9 @@
 ---
+import GitHub from './icons/GitHub.astro';
+import VideoLink from './icons/VideoLink.astro';
 import Java from '../components/icons/Java.astro';
 import SpringBoot from '../components/icons/SpringBoot.astro';
+import LinkButton from './LinkButton.astro';
 const TAGS = {
   JAVA: {
     name: 'Java',
@@ -17,7 +20,7 @@ const PROJECTS = [
   {
     title: 'LiterAlura',
     description: 'Gestion de libros y sus autores.',
-    link: '#',
+    video: '#',
     github: 'https://github.com/Kcireog/LiterAlura',
     image: '/projects/literaluraProject.webp',
     tags: [TAGS.JAVA, TAGS.SPRING],
@@ -25,27 +28,43 @@ const PROJECTS = [
 ];
 ---
 
-{
-  PROJECTS.map(({ image, title, description, tags }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-4 flex-row mb-2">
-        {tags.map((tag) => (
-          <li>
-            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}>
-              <tag.icon class="h-4 w-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        loading="lazy"
-        class="rounded shadow-2xl shadow-white/10 aspect-video"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-    </article>
-  ))
-}
+<section class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, video, github }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2">
+          {tags.map((tag) => (
+            <li>
+              <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
+                <tag.icon class="w-4 h-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-video"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+        <footer class="flex gap-x-4 items-end justify-start mt-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="w-6 h-6" />
+              Ver código fuente
+            </LinkButton>
+          )}
+          {video && (
+            <LinkButton href={video}>
+              <VideoLink class="w-6 h-6" />
+              Video resumen
+            </LinkButton>
+          )}
+        </footer>
+      </article>
+    ))
+  }
+</section>
