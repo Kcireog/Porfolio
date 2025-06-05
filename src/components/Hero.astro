@@ -1,0 +1,41 @@
+---
+const personalImageAlt = 'Erick S Rodriguez';
+import Badge from '@/components/Badge.astro';
+import LinkedInIcon from '@/components/icons/LinkedIn.astro';
+import MailIcon from '@/components/icons/Mail.astro';
+import GitHubIcon from '@/components/icons/GitHub.astro';
+import SocialPill from '@/components/SocialPill.astro';
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img class="rounded-full shadow-lg w-16 h-16" src="/public/images/Kophoto.webp" alt={personalImageAlt} />
+    <a
+      href="https://www.linkedin.com/in/erick-santiago-rodriguez-reinoso/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105">
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">¡Hola! Soy Erick</h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+    ... <strong>Ingeniero de Sistemas y Desarrollador Backend</strong> de Ibagué, Colombia 🇨🇴. ...
+  </p>
+
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:rodriguezsantiago0230@hotmail.com">
+      <MailIcon class="w-4 h-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/erick-santiago-rodriguez-reinoso/">
+      <LinkedInIcon class="w-4 h-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/Kcireog">
+      <GitHubIcon class="w-4 h-4" />
+      GitHub
+    </SocialPill>
+  </nav>
+</div>
