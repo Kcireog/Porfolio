@@ -11,7 +11,7 @@ interface Props {
 const { description, title } = Astro.props;
 ---
 
-<!doctype html>
+<!-- NO TOCAR POSIBLE VERSION FINAL --><!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -23,7 +23,7 @@ const { description, title } = Astro.props;
     <ClientRouter />
   </head>
 
-  <body class="relative text-black dark:text-white">
+  <body class="relative text-black dark:text-white px-4">
     <div
       class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-100 dark:bg-neutral-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
@@ -32,14 +32,17 @@ const { description, title } = Astro.props;
     <Header />
     <slot />
     <Footer />
+
     <style is:global>
       :root {
         color-scheme: light dark;
       }
+
       html {
         font-family: 'Onest Variable', system-ui, sans-serif;
         scroll-behavior: smooth;
       }
+
       body {
         color: rgba(17, 17, 17, 0.9);
         display: flex;
@@ -47,16 +50,19 @@ const { description, title } = Astro.props;
         min-height: 100vh;
         overscroll-behavior: none;
       }
+
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
         }
       }
+
       @media (prefers-color-scheme: dark) {
         body {
           color: rgba(255, 255, 255, 0.9);
         }
       }
+
       #header-nav {
         animation: blur linear both 0.5s;
         animation-timeline: scroll();
@@ -68,10 +74,7 @@ const { description, title } = Astro.props;
           backdrop-filter: blur(20px);
           border-width: 1px;
           border-color: rgba(0, 0, 0);
-          padding-left: 0.75rem;
-          padding-right: 0.75rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
+          padding: 0.25rem 0.75rem;
           display: flex;
           flex-direction: row;
           align-items: center;
