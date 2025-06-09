@@ -6,16 +6,16 @@ import SystemIcon from './icons/System.astro';
 const THEMES = ['Light', 'Dark', 'System'];
 ---
 
-<div class="relative">
-  <button id="theme-toggle-btn" class="appearance-none border-none flex backdrop-blur-md">
-    <span class="sr-only">Choose theme</span>
-    <SunIcon id="light" class="theme-toggle-icon size-[1.2rem] transition-all" />
-    <MoonIcon id="dark" class="theme-toggle-icon absolute size-[1.2rem] transition-all" />
-    <SystemIcon id="system" class="theme-toggle-icon absolute size-[1.2rem] transition-all" />
+<div class="relative ml-1 mr-1">
+  <button id="theme-toggle-btn" class="appearance-none border-none flex hover:scale-125 transition">
+    <span class="sr-only">Elige tema</span>
+    <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" />
+    <MoonIcon id="dark" class="theme-toggle-icon absolute size-5 transition-all" />
+    <SystemIcon id="system" class="theme-toggle-icon absolute size-5 transition-all" />
   </button>
   <div
     id="themes-menu"
-    class="absolute opacity-0 scale-80 top-7 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/70 dark:bg-gray-900/70 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md">
+    class="absolute opacity-0 scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/70 dark:bg-gray-900/70 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md">
     <ul>
       {
         THEMES.map((theme) => (
