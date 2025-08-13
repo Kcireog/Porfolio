@@ -1,0 +1,40 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+
+const ACADEMYEXPERIENCE = [
+  {
+    date: 'Enero 2025',
+    title: 'Formación Avanzada Desarrollo Back-End',
+    company: 'Alura LATAM - Oracle Next Education (ONE)',
+    description:
+      'Formación teórico-práctica orientada al desarrollo Back-End. El programa abarco competencias en lenguajes como Java, frameworks como Spring Boot, manejo de bases de datos, diseño de APIs RESTful, patrones de arquitectura y buenas prácticas de desarrollo, entre otros.',
+    link: '',
+  },
+  {
+    date: 'Septiembre 2024',
+    title: 'Ingeniero de Sistemas',
+    company: 'Universidad del Tolima',
+    description: 'En desarrollo...',
+    link: '',
+  },
+  {
+    date: 'Diciembre 2023',
+    title: 'Backend Developer',
+    company: 'Globant University - Egg Live',
+    description:
+      'Curso introductorio–intermedio orientado al desarrollo Back-End con Java. Aprendí a trabajar con bases de datos relacionales y a construir aplicaciones utilizando Spring Boot y su ecosistema (Spring MVC, Spring Data, Spring Security). También adquirí conocimientos en control de versiones y herramientas para el desarrollo colaborativo',
+    link: '',
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    ACADEMYEXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+        {/* <p class="text-xl">Muy pronto...</p> */}
+      </li>
+    ))
+  }
+</ol>
